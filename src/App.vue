@@ -76,7 +76,15 @@
     </div>
   </div>
 
-<!-- hover:bg-yellow-200 hover:shadow-lg hover:shadow-yellow-100 -->
+  <p class="text-center mb-10">------------------------------</p>
+
+    <div class="group border border-violet-700">
+      <img src="../public/sample.jpg" alt="Your Image" class="w-1/2 h-auto items-center justify-center">
+      <div class="relative -top-16 left-0 right-0 bottom-0 bg-black opacity-90 w-1/2 h-16 items-center justify-center group-hover:opacity-0 transition-opacity duration-500">
+        <p class="text-white text-center pt-4 text-xl font-semibold">Lorem Ipsum Anjasss</p>
+      </div>
+    </div>
+
 </template>
 
 <style scoped>
