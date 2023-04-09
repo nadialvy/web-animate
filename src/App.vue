@@ -63,6 +63,20 @@
       <p class="text-center text-xl text-white">Ciluk</p>
     </div>
   </div>
+
+  <p class="text-center">------------------------------</p>
+
+  <div class="flex items-center justify-center">
+    <div class="bg-slate-800 w-40 h-40 rounded-full my-20 flex justify-center items-center group hover:bg-yellow-200 hover:shadow-lg hover:shadow-yellow-100 transition-all" @mouseover="changeImage" @mouseleave="resetImage">
+      <div class="bg-dark-red w-36 h-36 rounded-full flex items-center justify-center">
+        <div class="bg-slate-800 w-32 h-32 rounded-full group-hover:bg-yellow-200 group-hover:shadow-lg hover:shadow-yellow-100 flex items-center justify-center transition-all">
+          <img :src="imageSrc" alt="Gambar" class="w-1/2 items-center justify-center">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- hover:bg-yellow-200 hover:shadow-lg hover:shadow-yellow-100 -->
 </template>
 
 <style scoped>
@@ -84,6 +98,19 @@
 
 <script>
 export default {
+  data() {
+    return {
+      imageSrc: "../public/off.png"
+    };
+  },
+  methods: {
+    changeImage() {
+      this.imageSrc = "../public/on.png";
+    },
+    resetImage() {
+      this.imageSrc = "../public/off.png";
+    }
+  },
   mounted() {
     const animateOnLoad = document.getElementById("animate-on-load");
     animateOnLoad.classList.add("animate-up");
